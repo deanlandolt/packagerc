@@ -20,8 +20,8 @@ The API is the same as [`rc`](https://github.com/dominictarr/rc), except the fir
 The `packagerc` lib allows you to invoke `rc` with the `appname` of `"somepackage"` from anywhere within your app, optionally supplying defaults just like for `rc`:
 
 ```js
-var conf = require('packagerc')(module, {
-  // defaults
+var conf = require('packagerc')({
+  // user-specified defaults
   port: 2468
 })
 // conf.port === 2468
@@ -53,6 +53,7 @@ NB: NYI -- for now defaults in `package.json` are a *default* set of defaults wh
   "rc": {
     "name": "somepackage",
     "defaults": {
+      // package-specified defaults
       "port": 4444,
       "host": "0.0.0.0"
     }
