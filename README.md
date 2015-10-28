@@ -24,7 +24,7 @@ var conf = require('packagerc')({
   // user-specified defaults
   port: 2468
 })
-// conf.port === 2468
+conf.port === 2468
 ```
 
 Config resolution is exactly the same as `rc`:
@@ -38,12 +38,10 @@ Config resolution is exactly the same as `rc`:
 var conf = require('packagerc')({
   port: 2468
 })
-// conf.port === 8888
+conf.port === 8888
 ```
 
 Defaults may also be provided within the `package.json`, which will be overridden by any defaults you provide explicitly as part of the call to `rc`.
-
-NB: NYI -- for now defaults in `package.json` are a *default* set of defaults which are completely superceded if any defaults are provided at runtime.
 
 ```js
 // package.json
@@ -61,13 +59,12 @@ NB: NYI -- for now defaults in `package.json` are a *default* set of defaults wh
 }
 
 var conf = require('packagerc')()
-// conf.port === 4444
-// conf.host === '0.0.0.0'
+conf.port === 4444
+conf.host === '0.0.0.0'
 
 var conf = require('packagerc')({
   port: 2468
 })
-// conf.port === 2468
-// TODO: conf.host === '0.0.0.0'
-// for now, conf.host === undefined
+conf.port === 2468
+conf.host === '0.0.0.0'
 ```

@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/deanlandolt/packagerc#readme",
   "dependencies": {
+    "deep-extend": "^0.4.0",
     "find-package": "^1.0.0",
     "rc": "^1.1.2"
   },

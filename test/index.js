@@ -15,8 +15,6 @@ test('user-provided defaults', function (t) {
   })
 
   t.equal(conf.port, 2468)
-  // TODO
-  // t.equal(conf.host, '0.0.0.0')
-  t.equal(conf.host, undefined)
+  t.equal(conf.host, '0.0.0.0')
   t.end()
 })
