@@ -1,14 +1,17 @@
 'use strict'
 
 var extend = require('deep-extend')
+var Module = require('module')
 var rc = require('rc')
 var resolve = require('find-package')
 
 module.exports = function (name, userDefaults, argv, parse) {
-  // TODO: allow `name` to be provided as a module instance?
+  // allow `name` to be provided as a module instance
+  var target = name instanceof Module ? name : module.parent
 
-  var meta = resolve(module.parent.filename, true) || {}
-  var metaConf = meta.rc || {}
+  // resolve package.json associated with target
+  var meta = resolve(target.filename, true)
+  var metaConf = meta && meta.rc || {}
   var metaDefaults = metaConf.defaults
 
   if (typeof name === 'string') {
