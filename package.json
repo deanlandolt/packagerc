@@ -1,0 +1,35 @@
+{
+  "name": "packagerc",
+  "version": "0.0.0",
+  "description": "Extended rc parser which extracts rc app name and defaults from package.json",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test | faucet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deanlandolt/packagerc.git"
+  },
+  "keywords": [
+    "rc",
+    "package.json",
+    "config"
+  ],
+  "author": "Dean Landolt <dean@deanlandolt.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deanlandolt/packagerc/issues"
+  },
+  "homepage": "https://github.com/deanlandolt/packagerc#readme",
+  "dependencies": {
+    "find-package": "^1.0.0",
+    "rc": "^1.1.2"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^4.2.2"
+  }
+}
