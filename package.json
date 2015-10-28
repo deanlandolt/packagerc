@@ -1,6 +1,6 @@
 {
   "name": "packagerc",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Extended rc parser which extracts rc app name and defaults from package.json",
   "main": "index.js",
   "directories": {
