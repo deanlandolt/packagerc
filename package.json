@@ -27,7 +27,7 @@
   "dependencies": {
     "deep-extend": "^0.4.0",
     "find-package": "^1.0.0",
-    "rc": "^1.1.2"
+    "rc": "^1.1.3"
   },
   "devDependencies": {
     "faucet": "0.0.1",
